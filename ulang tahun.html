@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday! ✨</title>
+    <!-- Google Fonts untuk kesan elegan -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #0b0b0b; /* Gelap elegan */
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        /* Progress Bar di atas */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: linear-gradient(to right, #d4af37, #f3e5ab);
+            width: 0%;
+            z-index: 1000;
+            transition: width 0.1s ease;
+        }
+
+        /* Desain Section / Halaman */
+        section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+            position: relative;
+        }
+
+        /* Hero / Halaman Utama */
+        .hero {
+            background: radial-gradient(circle, #1a1a1a 0%, #050505 100%);
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 3.5rem;
+            color: #d4af37; /* Warna Emas Klasik */
+            letter-spacing: 4px;
+            margin-bottom: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+            color: #a0a0a0;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        .scroll-down {
+            position: absolute;
+            bottom: 30px;
+            font-size: 0.9rem;
+            color: #d4af37;
+            letter-spacing: 2px;
+            animation: bounce 2s infinite;
+        }
+
+        /* Konten Ucapan & Foto */
+        .content-section {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .text-box {
+            font-size: 1.5rem;
+            line-height: 1.8;
+            font-weight: 300;
+            margin-bottom: 40px;
+            color: #e0e0e0;
+            font-family: 'Cinzel', serif;
+        }
+
+        .image-container {
+            width: 100%;
+            max-width: 500px;
+            height: 350px;
+            margin: 20px auto;
+            border-radius: 15px;
+            overflow: hidden;
+            border: 2px solid #d4af37;
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(30%);
+            transition: transform 0.5s ease;
+        }
+
+        .image-container injustice:hover img {
+            transform: scale(1.05);
+            filter: grayscale(0%);
+        }
+
+        /* --- ANIMASI SCROLL (EFEK MUNCUL) --- */
+        .reveal {
+            opacity: 0;
+            transform: translateY(80px);
+            transition: all 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Animasi Bawaan */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+
+        /* Footer */
+        footer {
+            padding: 40px;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #555;
+            letter-spacing: 2px;
+            border-top: 1px solid #1a1a1a;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Progress bar penanda scroll -->
+    <div class="progress-bar" id="myBar"></div>
+
+    <!-- Halaman Utama -->
+    <section class="hero">
+        <h1>HAPPY BIRTHDAY</h1>
+        <p>A Journey Through Time and Memories</p>
+        <div class="scroll-down">SCROLL DOWN TO SEE</div>
+    </section>
+
+    <!-- Bagian 1: Kata-kata + Foto 1 -->
+    <section>
+        <div class="content-section reveal">
+            <p class="text-box">"Hari ini adalah lembaran baru dari buku kehidupanmu. Semoga setiap detiknya dipenuhi oleh kebahagiaan yang tak terhitung."</p>
+            <div class="image-container">
+                <!-- Ganti URL di bawah dengan link foto kamu sendiri -->
+                <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=600" alt="Foto Kenangan 1">
+            </div>
+        </div>
+    </section>
+
+    <!-- Bagian 2: Kata-kata + Foto 2 -->
+    <section>
+        <div class="content-section reveal">
+            <p class="text-box">"Terima kasih telah menjadi warna yang paling indah di dalam hari-hariku. Selamat mengulang tahun, jiwa yang luar biasa."</p>
+            <div class="image-container">
+                <!-- Ganti URL di bawah dengan link foto kamu sendiri -->
+                <img src="https://images.unsplash.com/photo-1513151233558-d860c5398176?w=600" alt="Foto Kenangan 2">
+            </div>
+        </div>
+    </section>
+
+    <!-- Bagian 3: Kata-kata + Foto 3 -->
+    <section>
+        <div class="content-section reveal">
+            <p class="text-box">"Di usia yang baru ini, kuucapkan doa terbaik. Semoga impianmu tidak lagi sekadar mimpi, melainkan takdir yang menjadi nyata."</p>
+            <div class="image-container">
+                <!-- Ganti URL di bawah dengan link foto kamu sendiri -->
+                <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=600" alt="Foto Kenangan 3">
+            </div>
+        </div>
+    </section>
+
+    <!-- Bagian Akhir / Penutup -->
+    <section style="background: radial-gradient(circle, #111 0%, #000 100%);">
+        <div class="content-section reveal">
+            <h2 style="font-family: 'Cinzel', serif; color: #d4af37; font-size: 2.5rem; margin-bottom: 20px;">Cheers to You! 🥂</h2>
+            <p style="color: #888; max-width: 600px; margin: 0 auto; line-height: 1.6;">Website ini dibuat khusus untuk merayakan hari spesialmu. Semoga kamu menyukainya!</p>
+        </div>
+    </section>
+
+    <footer>
+        MADE WITH LOVE &bull; 2026
+    </footer>
+
+    <!-- JavaScript untuk mendeteksi Scroll -->
+    <script>
+        function revealElements() {
+            var reveals = document.querySelectorAll(".reveal");
+
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150; // Jarak trigger agar elemen muncul saat di-scroll
+
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                } else {
+                    reveals[i].classList.remove("active"); // Hapus baris ini jika ingin efek munculnya hanya sekali saja
+                }
+            }
+        }
+
+        // Fungsi untuk menggerakkan progress bar di bagian atas layar
+        function updateProgressBar() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("myBar").style.width = scrolled + "%";
+        }
+
+        // Jalankan fungsi saat user melakukan scroll
+        window.addEventListener("scroll", function() {
+            revealElements();
+            updateProgressBar();
+        });
+
+        // Jalankan sekali di awal untuk cek elemen yang sudah ada di layar utama
+        revealElements();
+    </script>
+</body>
+</html>
